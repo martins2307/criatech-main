@@ -1,35 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Inicio = () => {
+const Home = () => {
   return (
-    <div className='bg-slate-900 flex w-full scroll-mt-28 px-10 ' id='inicio'>
-      <div className='container mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] columns-2 space-y-10 '>
-        
-        <div className="font-semibold ">
+    <div className='bg-slate-900 flex w-full scroll-mt-28 px-10 pb-4' id='home'>
+      <div className='container mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] flex h-full items-center justify-between'>
+        <div className='flex flex-col h-full max-w-md'>
+        <div className="font-semibold">
             <h1 className='text-7xl text-white relative'>Criatech</h1><br/>
             <h1 className='text-7xl text-emerald-500 relative'> Soluções</h1>
         </div>
         <div className="font-light align-top">
             <p className="text-2xl text-white relative">
-            Nós desenvolvemos e entregamos<br/> 
-            softwares customizados para clientes em <br/>
-            todo o mundo desde 2015.
+            We develop and deliver customized software for clients worldwide since 2015.
             </p>
             <p className="text-2xl text-white relative">
-            Nós treinamos profissionais para entender <br/>
-            todos os seus problemas e desenvolver <br/>
-            soluções customizadas para solucioná-<br/>los.
+            We train professionals to understand all their problems and develop customized solutions to solve them.
             </p>
         </div>
         <div className="text-white ">
           <Link href={"/Sobre"}>
             <button className="border border-slate-300 hover:border-emerald-500 rounded-md p-3">
-                Veja quem somos
+            See who we are.
             </button>
           </Link>
         </div>
-        <div className="flex relative ">
+        </div>
+        <div className="flex relative">
           <Image
                 src={"/images/banner.png"}
                 alt="sobre"
@@ -42,4 +39,4 @@ const Inicio = () => {
   )
 }
 
-export default Inicio
+export default Home

@@ -1,13 +1,40 @@
 import Image from "next/image";
 import Link from "next/link"
+import ReactCountryFlag from "react-country-flag";
 
-export default function Header() {
-  const links = [
-    ["Início", "/"],
-    ["Sobre", "/sobre"],
-    ["Clientes", "/clientes"],
-    ["Contato", "/contato"],
-  ];
+type HeaderLink = {
+  label: string | JSX.Element
+  href: string
+};
+
+interface HeaderProps {
+  links?: HeaderLink[];
+}
+
+const defaultLinks = [
+  {
+    label: 'Início',
+    href: '#inicio'
+  },
+  {
+    label: 'Sobre',
+    href: '#sobre'
+  },
+  {
+    label: 'Clientes',
+    href: '#clientes'
+  },
+  {
+    label: 'Contato',
+    href: '#contato'
+  },
+  {
+    label:   <ReactCountryFlag countryCode="US" />,
+    href: '/en'
+  },
+];
+
+export default function Header({ links = defaultLinks }: HeaderProps) {
   return (
     <main>
       <div className="w-100 h-[118px] flex items-center justify-between px-2 bg-slate-900 font-roboto text-white">
@@ -25,9 +52,9 @@ export default function Header() {
               {links.map((item, i) => (
                 <li
                   key={i}
-                  className="duration-500 hover:text-emerald-700"
+                  className="duration-500 hover:text-emerald-700 h-full flex items-center"
                 >
-                  <Link href={item[1]}>{item[0]}</Link>
+                  <Link href={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>

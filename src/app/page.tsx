@@ -10,7 +10,6 @@ const Page = () => {
   return (
     <>
     <Header />
-
       <main className=''>
         <Inicio />
         <Sobre />
