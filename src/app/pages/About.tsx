@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "../hooks/useTranslation";
 
 const ListPrefix = () => (
     <div className="flex items-center justify-center rounded-full">
@@ -20,7 +21,8 @@ const ListPrefix = () => (
     </div>
 )
 
-const Sobre = () => {
+const About = () => {
+    const { t } = useTranslation()
     return (
         <div className=' bg-slate-950 h-full w-full scroll-mt-28 px-6 text-white py-16' id='about'>
             <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[70vw] flex gap-16 items-center'>
@@ -33,55 +35,49 @@ const Sobre = () => {
                     />
                 </div>
                 <div className='flex flex-col gap-8'>
-                    <h1 className="text-5xl font-bold">Quem somos nós?</h1>
-                    <p className="text-2xl font-light align-top">
-                        A criatech foi fundada em 2015, baseada na <br />
-                        experiência dos seus fundadores nas áreas de <br />
-                        Engenharia, Gestão de Negócios e <br />
-                        desenvolvimento de software.
+                    <h1 className="text-5xl font-bold">{t("who_we_are_title")}</h1>
+                    <p className="text-2xl max-w-xl w-full font-light align-top">
+                        {t("who_we_are_text1")}
                     </p>
 
-                    <p className="text-2xl font-light align-top">
-                        Nós acreditamos que o conhecimento é a chave <br />
-                        para o desenvolvimento e, desta forma, decidimos <br />
-                        alocar a sede da companhia no interior de <br />
-                        Pernambuco, oferecendo à comunidade local <br />
-                        oportunidades que normalmente só as grandes <br />
-                        cidades têm a oferecer no Brasil.
+                    <p className="text-2xl max-w-xl w-full font-light align-top">
+                        {t("who_we_are_text2")}
                     </p>
                 </div>
             </div>
             <div className="text-white text-center py-16">
-                <h1 className="text-5xl font-bold">Por quê a Criatech? </h1>
+
+                <h1 className="text-5xl font-bold">
+                    {t("why_criatech_title")}</h1>
                 <ul className='flex flex-col gap-8 py-16'>
                     <li className='w-full flex gap-8 justify-center'>
                         <ListPrefix />
                         <p className="text-2xl font-light align-top">
-                            Nós não cedemos no tempo de entrega
+                            {t("why_criatech_item1")}
                         </p>
                     </li>
                     <li className='w-full flex gap-8 justify-center'>
                         <ListPrefix />
                         <p className="text-2xl font-light align-top">
-                            Nós entregamos a solução na melhor qualidade
+                            {t("why_criatech_item2")}
                         </p>
                     </li>
                     <li className='w-full flex gap-8 justify-center'>
                         <ListPrefix />
                         <p className="text-2xl font-light align-top">
-                            Nós temos preços competitivos
+                            {t("why_criatech_item3")}
                         </p>
                     </li>
                     <li className='w-full flex gap-8 justify-center'>
                         <ListPrefix />
                         <p className="text-2xl font-light align-top">
-                            Nós valorizamos as parcerias de longo prazo
+                            {t("why_criatech_item4")}
                         </p>
                     </li>
                     <li className='w-full flex gap-8 justify-center'>
                         <ListPrefix />
                         <p className="text-2xl font-light align-top">
-                            Nós somos absolutamente focados em boa comunicação
+                            {t("why_criatech_item5")}
                         </p>
                     </li>
                 </ul>
@@ -115,4 +111,4 @@ const Sobre = () => {
     )
 }
 
-export default Sobre
+export default About

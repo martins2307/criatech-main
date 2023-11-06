@@ -29,7 +29,7 @@ const clientsMap = [
   }
 ]
 
-const Clientes = () => {
+const Clients = () => {
   return (
     <div className='w-full scroll-mt-28 px-6 py-16 bg-slate-900 text-white' id='clients'>
       <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] flex flex-col gap-10'>
@@ -37,7 +37,6 @@ const Clientes = () => {
         <div className="grid grid-cols-3 grid-rows-2 gap-x-8 gap-y-12 items-center text-2xl font-medium">
           {clientsMap.map((client) => (
             <div className='flex flex-col gap-4' key={client.name}>
-
               <img
                 src={client.imageURL}
                 alt={client.name}
@@ -54,4 +53,4 @@ const Clientes = () => {
   )
 }
 
-export default Clientes
+export default Clients

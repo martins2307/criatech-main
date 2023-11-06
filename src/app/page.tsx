@@ -1,22 +1,27 @@
-import Image from 'next/image'
-import Link from "next/link"
+"use client"
+
+import { useState } from 'react'
 import Header from './_components/Header'
-import Inicio from "./pages/Inicio"
-import Sobre from "./pages/Sobre"
-import Clientes from "./pages/Clientes"
-import Contato from "./pages/Contato"
+import { TranslationContext } from './contexts/TranslationContext'
+import About from './pages/About'
+import Clients from './pages/Clients'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
 
 const Page = () => {
+  const [lang, setLang] = useState('pt')
   return (
-    <>
-    <Header />
+    <TranslationContext.Provider value={{
+      lang, setLang
+    }}>
+      <Header />
       <main className=''>
-        <Inicio />
-        <Sobre />
-        <Clientes />
-        <Contato />
+        <Home />
+        <About />
+        <Clients />
+        <Contact />
       </main>
-      </>
+    </TranslationContext.Provider>
   )
 }
 
