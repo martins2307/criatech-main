@@ -17,7 +17,7 @@ const InstagramIcon = () => (
 const Contact = () => {
   const { t } = useTranslation()
   return (
-    <div className='w-full scroll-mt-28 px-6 p-8 bg-slate-950 text-white' id='contact'>
+    <div className='w-full scroll-mt-28 px-6 p-8 bg-primary-contact text-white' id='contact'>
       <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] grid grid-cols-3 items-center'>
         <div className="logo">
           <Image
@@ -30,19 +30,19 @@ const Contact = () => {
         <div className="w-full flex flex-col gap-4 items-center">
           <h1 className='w-full text-2xl text-center'>{t("contacts_title")}</h1>
           <ul>
-            <li className="flex gap-4 duration-500 hover:text-emerald-700">
+            <li className="flex gap-4 duration-500 hover:text-primary-success">
               <EmailIcon />
               <a href="mailto:contato@criatech.me">
                 contato@criatech.me
               </a>
             </li>
-            <li className="flex gap-4 duration-500 hover:text-emerald-700">
+            <li className="flex gap-4 duration-500 hover:text-primary-success">
               <WhatsappIcon />
               <a href="mailto:contato@criatech.me">
                 21 99261-0410
               </a>
             </li>
-            <li className="flex gap-4 duration-500 hover:text-emerald-700">
+            <li className="flex gap-4 duration-500 hover:text-primary-success">
               <WhatsappIcon />
               <a href="mailto:contato@criatech.me" >
                 87 98853-2558
@@ -50,7 +50,7 @@ const Contact = () => {
             </li>
           </ul>
         </div>
-        <div className='w-full flex items-center justify-center'>
+        <div className='w-full flex items-center justify-center duration-500 hover:text-primary-success'>
           <a href="https://www.instagram.com/criatech/" target='_blank'>
             <InstagramIcon />
           </a>

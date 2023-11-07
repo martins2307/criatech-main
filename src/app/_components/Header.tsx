@@ -38,8 +38,8 @@ export default function Header({ links = defaultLinks }: HeaderProps) {
 
   return (
     <main>
-      <div className="w-100 h-[118px] flex items-center justify-between px-2 bg-slate-900 font-roboto text-white">
-        <div className="logo">
+      <div className="w-100 h-[118px] flex items-center justify-between p-16 bg-primary-home font-roboto text-white">
+        <div className="logo" data-aos="fade-up">
           <Image
             src={"/images/logo.png"}
             alt="Criatech Logo"
@@ -47,7 +47,7 @@ export default function Header({ links = defaultLinks }: HeaderProps) {
             height={70}
           />
         </div>
-        <nav className="font-roboto uppercase">
+        <nav className="font-roboto uppercase" data-aos="fade-up">
           {/* Normal navigation */}
           <ul className="hidden md:flex h-100 gap-3 text-base flex-row justify-between transition-all ease-in-out">
             {links.map((item, i) => (
