@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslation } from "../hooks/useTranslation";
 
 const WhatsappIcon = () => (<svg style={{
   color: 'rgb(37, 211, 102)',
@@ -15,6 +15,7 @@ const InstagramIcon = () => (
 
 
 const Contact = () => {
+  const { t } = useTranslation()
   return (
     <div className='w-full scroll-mt-28 px-6 p-8 bg-slate-950 text-white' id='contact'>
       <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] grid grid-cols-3 items-center'>
@@ -27,7 +28,7 @@ const Contact = () => {
           />
         </div>
         <div className="w-full flex flex-col gap-4 items-center">
-          <h1 className='w-full text-2xl text-center'>Contacts</h1>
+          <h1 className='w-full text-2xl text-center'>{t("contacts_title")}</h1>
           <ul>
             <li className="flex gap-4 duration-500 hover:text-emerald-700">
               <EmailIcon />

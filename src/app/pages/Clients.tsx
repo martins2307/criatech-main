@@ -1,35 +1,36 @@
-import { Flow_Rounded } from "next/font/google";
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslation } from "../hooks/useTranslation";
 
 const clientsMap = [
   {
-    'name': 'Rina Brasil',
+    'name': 'rina',
     'imageURL': 'images/rina.jpg'
   },
   {
-    'name': 'Omni Brasil',
+    'name': 'omni',
     'imageURL': 'images/omni.png'
   },
   {
-    'name': 'Edunat',
+    'name': 'edunat',
     'imageURL': 'images/edunat.png'
   },
   {
-    'name': 'Aerorio Táxi Aéreo',
+    'name': 'aerorio',
     'imageURL': 'images/aerorio.jpg'
   },
   {
-    'name': 'Minha consulta',
+    'name': 'minha_consulta',
     'imageURL': 'images/minhaconsulta.png'
   },
   {
-    'name': 'Flightech Aviation Service',
+    'name': 'flightech',
     'imageURL': 'images/flightech.jpg'
   }
 ]
 
 const Clients = () => {
+  const { t } = useTranslation()
   return (
     <div className='w-full scroll-mt-28 px-6 py-16 bg-slate-900 text-white' id='clients'>
       <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] flex flex-col gap-10'>
@@ -43,7 +44,7 @@ const Clients = () => {
                 className='w-full object-cover rounded-md'
               />
               <p className='w-full text-center font-light'>
-                {client.name}
+                {t(client.name)}
               </p>
             </div>
           ))}

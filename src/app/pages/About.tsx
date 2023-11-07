@@ -81,29 +81,29 @@ const About = () => {
                         </p>
                     </li>
                 </ul>
-                <h3 className='font-bold text-4xl w-full text-center'>Nós oferecemos as melhores tecnologias do mercado para alavancar a performance da sua empresa</h3>
+                <h3 className='font-bold text-4xl w-full text-center'>{t("what_do_we_offer_title")}</h3>
             </div>
             <div className='w-full flex justify-center'>
                 <div className="grid gap-16 grid-cols-2 grid-rows-2 justify-center max-w-5xl">
                     <div className="w-full h-full flex flex-col gap-8 p-16 items-center justify-center bg-slate-900 rounded-xl">
                         <img src='/images/mobile-app-icon.svg' className='w-16' />
-                        <h2 className='text-3xl font-bold'>Multiplatform apps</h2>
-                        <p className='w-full text-center'>We develop custom multiplatform mobile apps (iOS and Android) and web apps based on requirements, using modern technologies and software development tools.</p>
+                        <h2 className='text-3xl font-bold'>{t("what_do_we_offer_item1_title")}</h2>
+                        <p className='w-full text-center'>{t("what_do_we_offer_item1_subtitle")}</p>
                     </div>
                     <div className="w-full h-full flex flex-col gap-8 p-16 items-center justify-center bg-slate-900 rounded-xl">
                         <img src='/images/security-icon.svg' className='w-16' />
-                        <h2 className='text-3xl font-bold'>Security</h2>
-                        <p className='w-full text-center'>We provide solutions with security of all customers data. Data integrity is a critical part of quality in our applications.</p>
+                        <h2 className='text-3xl font-bold'>{t("what_do_we_offer_item2_title")}</h2>
+                        <p className='w-full text-center'>{t("what_do_we_offer_item2_subtitle")}</p>
                     </div>
                     <div className="w-full h-full flex flex-col gap-8 p-16 items-center justify-center bg-slate-900 rounded-xl">
                         <img src='/images/storage-icon.svg' className='w-16' />
-                        <h2 className='text-3xl font-bold'>Multiplatform apps</h2>
-                        <p className='w-full text-center'>We have the best solutions in cloud storage. Providing security, speed and reliability, your application will have a new level of quality!</p>
+                        <h2 className='text-3xl font-bold'>{t("what_do_we_offer_item3_title")}</h2>
+                        <p className='w-full text-center'>{t("what_do_we_offer_item3_subtitle")}</p>
                     </div>
                     <div className="w-full h-full flex flex-col gap-8 p-16 items-center justify-center bg-slate-900 rounded-xl">
                         <img src='/images/deadline-icon.svg' className='w-16' />
-                        <h2 className='text-3xl font-bold'>Multiplatform apps</h2>
-                        <p className='w-full text-center'>We know that time to market is important and based on agile development, our team work focused to deliver great software solutions as soon as possible.</p>
+                        <h2 className='text-3xl font-bold'>{t("what_do_we_offer_item4_title")}</h2>
+                        <p className='w-full text-center'>{t("what_do_we_offer_item4_subtitle")}</p>
                     </div>
                 </div>
             </div>
