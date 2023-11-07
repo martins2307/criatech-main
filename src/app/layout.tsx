@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { AosInit } from './_components/AosInit'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <AosInit />
       <body className={inter.className}>{children}</body>
     </html>
   )

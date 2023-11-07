@@ -1,50 +1,63 @@
-import { Flow_Rounded } from "next/font/google";
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslation } from "../hooks/useTranslation";
 
 const clientsMap = [
   {
-    'name': 'Rina Brasil',
+    'name': 'rina',
     'imageURL': 'images/rina.jpg'
   },
   {
-    'name': 'Omni Brasil',
+    'name': 'omni',
     'imageURL': 'images/omni.png'
   },
   {
-    'name': 'Edunat',
+    'name': 'edunat',
     'imageURL': 'images/edunat.png'
   },
   {
-    'name': 'Aerorio Táxi Aéreo',
+    'name': 'aerorio',
     'imageURL': 'images/aerorio.jpg'
   },
   {
-    'name': 'Minha consulta',
+    'name': 'minha_consulta',
     'imageURL': 'images/minhaconsulta.png'
   },
   {
-    'name': 'Flightech Aviation Service',
+    'name': 'flightech',
     'imageURL': 'images/flightech.jpg'
   }
 ]
 
-const Clientes = () => {
-  return (
-    <div className='w-full scroll-mt-28 px-6 py-16 bg-slate-900 text-white' id='clients'>
-      <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] flex flex-col gap-10'>
-        <h1 className='text-5xl text-center font-bold'>Criatech is trusted by</h1>
-        <div className="grid grid-cols-3 grid-rows-2 gap-x-8 gap-y-12 items-center text-2xl font-medium">
-          {clientsMap.map((client) => (
-            <div className='flex flex-col gap-4' key={client.name}>
+const Clients = () => {
+  const { t } = useTranslation()
 
+  const getFlipAnimation = (index: number) => {
+    // Na esquerda
+    if (index % 3 === 0) {
+      return "flip-right"
+    }
+    // No centro
+    if (index % 3 === 1) {
+      return "flip-up"
+    }
+    return "flip-left"
+  }
+
+  return (
+    <div className='w-full scroll-mt-28 px-6 py-16 bg-primary-team text-white' id='clients'>
+      <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] flex flex-col gap-10'>
+        <h1 className='text-5xl text-center font-bold' data-aos="fade-up">Criatech is trusted by</h1>
+        <div className="grid grid-cols-3 grid-rows-2 gap-x-8 gap-y-12 items-center text-2xl font-medium" data-aos="fade-up">
+          {clientsMap.map((client, index) => (
+            <div className='flex flex-col gap-4' key={client.name} data-aos={getFlipAnimation(index)}>
               <img
                 src={client.imageURL}
                 alt={client.name}
                 className='w-full object-cover rounded-md'
               />
               <p className='w-full text-center font-light'>
-                {client.name}
+                {t(client.name)}
               </p>
             </div>
           ))}
@@ -54,4 +67,4 @@ const Clientes = () => {
   )
 }
 
-export default Clientes
+export default Clients
