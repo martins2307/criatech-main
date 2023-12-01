@@ -17,19 +17,19 @@ interface HeaderProps {
 const defaultLinks = [
   {
     label: 'Início',
-    href: '#inicio'
+    href: '#home'
   },
   {
     label: 'Sobre',
-    href: '#sobre'
+    href: '#about'
   },
   {
     label: 'Clientes',
-    href: '#clientes'
+    href: '#clients'
   },
   {
     label: 'Contato',
-    href: '#contato'
+    href: '#contact'
   },
 ];
 
