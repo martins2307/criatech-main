@@ -25,7 +25,7 @@ const About = () => {
     const { t } = useTranslation()
     return (
         <div className=' bg-primary-about h-full w-full scroll-mt-28 px-6 text-white py-16' id='about'>
-            <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[70vw] flex gap-16 items-center'>
+            <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[70vw] flex md:flex-row flex-col gap-16 items-center text-center'>
                 <div data-aos="fade-right">
                     <Image
                         src={"/images/b1.png"}
@@ -35,7 +35,7 @@ const About = () => {
                     />
                 </div>
                 <div className='flex flex-col gap-8' data-aos="fade-left">
-                    <h1 className="text-5xl font-bold">{t("who_we_are_title")}</h1>
+                    <h1 className="text-4xl font-bold">{t("who_we_are_title")}</h1>
                     <p className="text-2xl max-w-xl w-full font-light align-top">
                         {t("who_we_are_text1")}
                     </p>
@@ -46,10 +46,9 @@ const About = () => {
                 </div>
             </div>
             <div className="text-white text-center py-16">
-
-                <h1 className="text-5xl font-bold" data-aos="fade-up">{t("why_criatech_title")}</h1>
+                <h1 className="text-4xl font-bold" data-aos="fade-up">{t("why_criatech_title")}</h1>
                 <div data-aos="fade-up" className="py-16 flex justify-center">
-                    <ul className='flex flex-col gap-8' data-aos="fade-right">
+                    <ul className='flex flex-col gap-8 text-left' data-aos="fade-right">
                         <li className='w-full flex gap-8'>
                             <ListPrefix />
                             <p className="text-2xl font-light align-top">
@@ -87,7 +86,7 @@ const About = () => {
                 </div>
             </div>
             <div className='w-full flex justify-center'>
-                <div className="grid gap-8 grid-cols-2 grid-rows-2 justify-center max-w-5xl" data-aos="fade-up">
+                <div className="grid gap-8 md:grid-cols-2 md:grid-rows-2 grid-cols-1 justify-center max-w-5xl" data-aos="fade-up">
                     <div className="w-full h-full flex flex-col gap-8 p-12 items-center justify-center bg-primary-home rounded-xl" data-aos="fade-right">
                         <img src='/images/mobile-app-icon.svg' className='h-24' />
                         <div className="flex flex-col gap-2">

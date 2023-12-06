@@ -48,7 +48,7 @@ const Clients = () => {
     <div className='w-full scroll-mt-28 px-6 py-16 bg-primary-team text-white' id='clients'>
       <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] flex flex-col gap-10'>
         <h1 className='text-5xl text-center font-bold' data-aos="fade-up">Criatech is trusted by</h1>
-        <div className="grid grid-cols-3 grid-rows-2 gap-x-8 gap-y-12 items-center text-2xl font-medium" data-aos="fade-up">
+        <div className="grid md:grid-cols-3 md:grid-rows-2 grid-cols-1 gap-x-8 gap-y-12 items-center text-2xl font-medium" data-aos="fade-up">
           {clientsMap.map((client, index) => (
             <div className='flex flex-col gap-4' key={client.name} data-aos={getFlipAnimation(index)}>
               <img

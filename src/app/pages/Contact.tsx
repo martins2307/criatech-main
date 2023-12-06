@@ -18,8 +18,8 @@ const Contact = () => {
   const { t } = useTranslation()
   return (
     <div className='w-full scroll-mt-28 px-6 p-8 bg-primary-contact text-white' id='contact'>
-      <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] grid grid-cols-3 items-center'>
-        <div className="logo">
+      <div className='container prose mx-auto md:prose-lg lg:prose-xl xl:max-w-[75vw] grid md:grid-cols-3 grid-cols-1 items-center'>
+        <div className="logo md:block hidden">
           <Image
             src={"/images/logo.png"}
             alt="Criatech Logo"
@@ -50,7 +50,7 @@ const Contact = () => {
             </li>
           </ul>
         </div>
-        <div className='w-full flex items-center justify-center duration-500 hover:text-primary-success'>
+        <div className='w-full md:flex hidden items-center justify-center duration-500 hover:text-primary-success'>
           <a href="https://www.instagram.com/criatech/" target='_blank'>
             <InstagramIcon />
           </a>

@@ -69,6 +69,18 @@ export default function Header({ links = defaultLinks }: HeaderProps) {
               </button>
             </li>
           </ul>
+          <ul className="flex md:hidden h-100 gap-3 text-base flex-row justify-between transition-all ease-in-out">
+            <li>
+              <button onClick={() => changeLanguage('en')}>
+                <ReactCountryFlag countryCode="US" style={{ fontSize: '32px !important'}} />
+              </button>
+            </li>
+            <li>
+              <button onClick={() => changeLanguage('pt')}>
+                <ReactCountryFlag countryCode="BR" style={{ fontSize: '32px !important'}} />
+              </button>
+            </li>
+          </ul>
         </nav>
       </div>
     </main>

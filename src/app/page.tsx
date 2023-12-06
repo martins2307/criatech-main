@@ -15,7 +15,7 @@ const Page = () => {
       lang, setLang
     }}>
       <Header />
-      <main className=''>
+      <main className='overflow-x-hidden w-full'>
         <Home />
         <About />
         <Clients />

@@ -7,8 +7,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Criatech Soluções',
-  description: 'Criatech Soluções',
+  description: 'A Criatech é uma fábrica de software Brasileira focada em soluções customizadas para o setor de engenharia',
+  authors: [{
+    name: "Criatech Soluções",
+    url: "https://criatech.me"
+  }],
+  keywords: "web, desenvolvimento, software, engenharia, sistemas, development, react, node, javascript, equipe, fábrica de software"
 }
+
 
 export default function RootLayout({
   children,
